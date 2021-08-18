@@ -7,6 +7,10 @@
     --> 6
 */
 
-function sumDigits() {}
+function sumDigits(num) {
+  const digitsArray = num.toString().split('').filter(char => /[0-9]/g.test(char));
+  const total = digitsArray.reduce((a, b) => Number.parseInt(a) + Number.parseInt(b), 0);
+  return total;
+}
 
 module.exports = sumDigits;

@@ -1,5 +1,7 @@
 /*
-  The function countVeg should take an array of vegetables and a string of the type of vegetable and return the total quantity of that type of vegetable in the array.
+  The function countVeg should take an array of vegetables and a string 
+  of the type of vegetable and return the total quantity of that type of 
+  vegetable in the array.
   Vegetable types can be root, leaf, legume, bulb or brassica.
   e.g.
   vegCounter([
@@ -12,6 +14,14 @@
 ], 'root') should return 9
 */
 
-function countVeg() {}
+function countVeg(vegArray, type) {
+  let sum = 0;
+  vegArray.forEach(veg => {
+    if(veg.type === type) {
+      sum += veg.quantity;
+    }
+  });
+  return sum;
+}
 
 module.exports = countVeg;
